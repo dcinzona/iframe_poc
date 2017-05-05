@@ -5,16 +5,11 @@
   <body>
     <div>hello</div>
     <script>
-      $(function(){
-        //window.postMessage('test','https://dcinzona.github.io');
-        //parent.postMessage('testParent','https://soundexchange--gmtdev.cs14.my.salesforce.com');
         window.addEventListener('message',function(event) {
           //if(event.origin !== 'https://davidwalsh.name') return;
           console.log('message received:  ' + event.data,event);
           event.source.postMessage('Ready!',event.origin);
         },false);
-        //Sfdc.canvas.publisher.resize({height: '300px'});
-      });
     </script>
   </body>
 </html>
