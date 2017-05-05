@@ -8,7 +8,7 @@
         window.addEventListener('message',function(event) {
           //if(event.origin !== 'https://davidwalsh.name') return;
           console.log('message received:  ' + event.data,event);
-          var height = $('body').height();
+          var height = $('html').height();
           event.source.postMessage(height + 'px',event.origin);
         },false);
     </script>
