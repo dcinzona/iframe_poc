@@ -3,12 +3,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
   <body>
-    <div>hello</div>
+    <div style="height:300px;">hello</div>
     <script>
         window.addEventListener('message',function(event) {
           //if(event.origin !== 'https://davidwalsh.name') return;
           console.log('message received:  ' + event.data,event);
-          event.source.postMessage('Ready!',event.origin);
+          var height = $('body').height();
+          event.source.postMessage(height + 'px',event.origin);
         },false);
     </script>
   </body>
